@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Nairobi Artesanal | Belleza Natural</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="clase.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fas fa-leaf"></i>
+        </div>
+
+        <div class="logo-text">
+            <span class="logo-name">Nairobi Artesanal</span>
+            <span class="logo-tag">Hecho con amor 🌸</span>
+        </div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#testimonios">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+
+        <!-- INSTAGRAM -->
+        <a 
+        href="https://www.instagram.com/nairobiartesanal?utm_source=qr&igsh=MTlsZDlhdDQwejBoOQ%3D%3D" 
+        target="_blank"
+        class="instagram-nav">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </div>
+</nav>
+
+<!-- CARRITO MODAL -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-modal" id="cartModal">
+
+    <div class="cart-header">
+        <h3>
+            <i class="fas fa-shopping-bag"></i>
+            Mi carrito
+        </h3>
+
+        <button class="close-cart" id="closeCartBtn">
+            &times;
+        </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart">
+            🌸 Tu carrito está vacío
+        </div>
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">RD$0</span>
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn">
+            <i class="fab fa-whatsapp"></i>
+            Finalizar compra
+        </button>
+
+    </div>
+
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <i class="fas fa-heart"></i>
+            Cosmética artesanal dominicana
+        </div>
+
+        <h1>Belleza natural para tu cabello 🌸</h1>
+
+        <p>
+            Productos capilares elaborados con ingredientes naturales,
+            fórmulas suaves y mucho amor.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#productos" class="btn btn-primary">
+                <i class="fas fa-leaf"></i>
+                Ver productos
+            </a>
+
+            <a href="https://wa.me/18099321148"
+               target="_blank"
+               class="btn btn-whatsapp">
+
+                <i class="fab fa-whatsapp"></i>
+                Pedir ahora
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTOS -->
+<section class="productos" id="productos">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Colección
+            </span>
+
+            <h2>Nuestros productos</h2>
+
+            <div class="section-divider"></div>
+
+        </div>
+
+        <div class="cards">
+
+            <!-- PRODUCTO 1 -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img 
+                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1974&auto=format&fit=crop"
+                    alt="Shampoo Natural">
+                </div>
+
+                <div class="card-content">
+
+                    <div class="card-icon">
+                        <i class="fas fa-pump-soap"></i>
+                    </div>
+
+                    <h3>Shampoo Natural</h3>
+
+                    <p>Limpieza profunda sin sulfatos.</p>
+
+                    <div class="card-price">
+                        RD$350
+                    </div>
+
+                    <button 
+                    class="btn-add"
+                    data-id="1"
+                    data-name="Shampoo Natural"
+                    data-price="350">
+
+                        <i class="fas fa-cart-plus"></i>
+                        Agregar al carrito
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2 -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img 
+                    src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?q=80&w=1974&auto=format&fit=crop"
+                    alt="Acondicionador">
+                </div>
+
+                <div class="card-content">
+
+                    <div class="card-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+
+                    <h3>Acondicionador</h3>
+
+                    <p>Hidratación intensa y brillo natural.</p>
+
+                    <div class="card-price">
+                        RD$420
+                    </div>
+
+                    <button 
+                    class="btn-add"
+                    data-id="2"
+                    data-name="Acondicionador"
+                    data-price="420">
+
+                        <i class="fas fa-cart-plus"></i>
+                        Agregar al carrito
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3 -->
+            <div class="card">
+
+                <div class="card-image">
+                    <img 
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1974&auto=format&fit=crop"
+                    alt="Gel de rizos">
+                </div>
+
+                <div class="card-content">
+
+                    <div class="card-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+
+                    <h3>Gel de rizos</h3>
+
+                    <p>Define y controla el frizz.</p>
+
+                    <div class="card-price">
+                        RD$290
+                    </div>
+
+                    <button 
+                    class="btn-add"
+                    data-id="3"
+                    data-name="Gel de rizos"
+                    data-price="290">
+
+                        <i class="fas fa-cart-plus"></i>
+                        Agregar al carrito
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios" id="testimonios">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Opiniones
+            </span>
+
+            <h2>Lo que dicen nuestras clientas</h2>
+
+            <div class="section-divider"></div>
+
+        </div>
+
+        <div class="testi-container">
+
+            <div class="testi">
+
+                <div class="testi-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p>"Mi cabello nunca había estado tan suave."</p>
+
+                <div class="testi-footer">
+                    <span class="testi-name">María R.</span>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+            </div>
+
+            <div class="testi">
+
+                <div class="testi-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+
+                <p>"El gel de rizos es increíble."</p>
+
+                <div class="testi-footer">
+                    <span class="testi-name">Carla D.</span>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+                Contacto
+            </span>
+
+            <h2>Estamos para ayudarte</h2>
+
+            <div class="section-divider"></div>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <!-- WHATSAPP -->
+                <div class="contact-item">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>+1 809-932-1148</p>
+                    </div>
+
+                </div>
+
+                <!-- INSTAGRAM -->
+                <div class="contact-item">
+
+                    <i class="fab fa-instagram"></i>
+
+                    <div>
+                        <h4>Instagram</h4>
+
+                        <p>
+                            <a 
+                            href="https://www.instagram.com/nairobiartesanal?utm_source=qr&igsh=MTlsZDlhdDQwejBoOQ%3D%3D"
+                            target="_blank">
+
+                            @nairobiartesanal
+
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- UBICACION -->
+                <div class="contact-item">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p>Santo Domingo, República Dominicana</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MAPA -->
+            <div class="contact-map">
+
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15141.51806112948!2d-69.912672!3d18.458903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89f1107ea5e7%3A0x5d415a7aedc1a5e!2sSanto%20Domingo!5e0!3m2!1ses!2sdo!4v1700000000000!5m2!1ses!2sdo" 
+                width="100%"
+                height="350"
+                style="border:0; border-radius:30px;"
+                allowfullscreen=""
+                loading="lazy">
+
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <i class="fas fa-leaf"></i>
+
+                <span>Nairobi Artesanal</span>
+
+                <p>
+                    Belleza natural para tu cabello 🌸
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="#testimonios">Opiniones</a>
+                <a href="#contacto">Contacto</a>
+
+                <a 
+                href="https://www.instagram.com/nairobiartesanal?utm_source=qr&igsh=MTlsZDlhdDQwejBoOQ%3D%3D"
+                target="_blank">
+
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Nairobi Artesanal — Hecho con amor 🌸
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+// MENU RESPONSIVE
+const menuIcon = document.getElementById('menuIcon');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuIcon) {
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+// CARRITO
+let cart = [];
+
+const cartIcon = document.getElementById('cartIcon');
+const cartModal = document.getElementById('cartModal');
+const cartOverlay = document.getElementById('cartOverlay');
+const closeCartBtn = document.getElementById('closeCartBtn');
+const cartItemsContainer = document.getElementById('cartItems');
+const cartTotalSpan = document.getElementById('cartTotal');
+const cartCountSpan = document.getElementById('cartCount');
+const checkoutBtn = document.getElementById('checkoutBtn');
+
+// Abrir carrito
+if (cartIcon) {
+    cartIcon.addEventListener('click', () => {
+        cartModal.classList.add('open');
+        cartOverlay.classList.add('open');
+    });
+}
+
+// Cerrar carrito
+function closeCart() {
+    cartModal.classList.remove('open');
+    cartOverlay.classList.remove('open');
+}
+
+if (closeCartBtn) {
+    closeCartBtn.addEventListener('click', closeCart);
+}
+
+if (cartOverlay) {
+    cartOverlay.addEventListener('click', closeCart);
+}
+
+// Agregar producto
+function addToCart(id, name, price) {
+
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({
+            id,
+            name,
+            price,
+            quantity: 1
+        });
+    }
+
+    updateCartUI();
+}
+
+// Aumentar
+window.increaseQuantity = function(id) {
+
+    const item = cart.find(item => item.id === id);
+
+    if (item) {
+        item.quantity++;
+        updateCartUI();
+    }
+};
+
+// Disminuir
+window.decreaseQuantity = function(id) {
+
+    const item = cart.find(item => item.id === id);
+
+    if (item) {
+
+        if (item.quantity > 1) {
+            item.quantity--;
+        } else {
+            cart = cart.filter(item => item.id !== id);
+        }
+
+        updateCartUI();
+    }
+};
+
+// Eliminar
+window.removeItem = function(id) {
+
+    cart = cart.filter(item => item.id !== id);
+
+    updateCartUI();
+};
+
+// Actualizar UI
+function updateCartUI() {
+
+    cartItemsContainer.innerHTML = '';
+
+    let total = 0;
+    let totalItems = 0;
+
+    if (cart.length === 0) {
+
+        cartItemsContainer.innerHTML =
+        '<div class="empty-cart">🌸 Tu carrito está vacío</div>';
+
+    } else {
+
+        cart.forEach(item => {
+
+            total += item.price * item.quantity;
+            totalItems += item.quantity;
+
+            const itemDiv = document.createElement('div');
+
+            itemDiv.classList.add('cart-item');
+
+            itemDiv.innerHTML = `
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p>RD$${item.price}</p>
+                </div>
+
+                <div class="cart-item-actions">
+
+                    <button onclick="decreaseQuantity(${item.id})">
+                        -
+                    </button>
+
+                    <span>${item.quantity}</span>
+
+                    <button onclick="increaseQuantity(${item.id})">
+                        +
+                    </button>
+
+                    <button onclick="removeItem(${item.id})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+
+                </div>
+            `;
+
+            cartItemsContainer.appendChild(itemDiv);
+        });
+    }
+
+    cartTotalSpan.textContent = `RD$${total}`;
+    cartCountSpan.textContent = totalItems;
+}
+
+// BOTONES PRODUCTOS
+document.querySelectorAll('.btn-add').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        const id = parseInt(button.getAttribute('data-id'));
+
+        const name = button.getAttribute('data-name');
+
+        const price = parseInt(button.getAttribute('data-price'));
+
+        addToCart(id, name, price);
+
+        const originalText = button.innerHTML;
+
+        button.innerHTML =
+        '<i class="fas fa-check"></i> ¡Agregado!';
+
+        setTimeout(() => {
+            button.innerHTML = originalText;
+        }, 800);
+
+    });
+});
+
+// CHECKOUT
+if (checkoutBtn) {
+
+    checkoutBtn.addEventListener('click', () => {
+
+        if (cart.length === 0) {
+            alert('🌸 Tu carrito está vacío');
+            return;
+        }
+
+        const nombre =
+        prompt('📝 Tu nombre completo:', '');
+
+        const whatsapp =
+        prompt('📱 Tu número de WhatsApp:', '');
+
+        if (!nombre || !whatsapp) {
+            alert('Por favor completa tus datos');
+            return;
+        }
+
+        let total = 0;
+
+        let message =
+        `🌸 *PEDIDO NAIROBI ARTESANAL* 🌸%0A%0A`;
+
+        message += `👤 Cliente: ${nombre}%0A`;
+
+        message += `📱 WhatsApp: ${whatsapp}%0A%0A`;
+
+        message += `📦 *Productos:*%0A`;
+
+        cart.forEach(item => {
+
+            message +=
+            `✨ ${item.name} x${item.quantity} — RD$${item.price * item.quantity}%0A`;
+
+            total += item.price * item.quantity;
+        });
+
+        message += `%0A💰 *Total: RD$${total}*%0A%0A`;
+
+        message += `🙏 ¡Gracias por tu compra! 🌿`;
+
+        window.open(
+            `https://wa.me/18099321148?text=${message}`,
+            '_blank'
+        );
+
+        cart = [];
+
+        updateCartUI();
+
+        closeCart();
+
+        alert('✅ Pedido enviado por WhatsApp');
+    });
+}
+
+// SCROLL SUAVE
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener('click', function(e) {
+
+        const targetId = this.getAttribute('href');
+
+        if (targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+
+        if (target) {
+
+            e.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Cerrar carrito con ESC
+document.addEventListener('keydown', (e) => {
+
+    if (
+        e.key === 'Escape' &&
+        cartModal.classList.contains('open')
+    ) {
+        closeCart();
+    }
+});
+
+</script>
+
+</body>
+</html>
